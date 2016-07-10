@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row m-t-2">
+		<div class="col-md-12">
+			<h1>Users</h1>
+			<div class="btn btn-sm btn-primary" ui-sref="create">Create</div>
+		</div>
+	</div>
+	<div class="row m-t-1">
+		<div class="col-md-12">
+			<div class="row">
+				<filter-select choices="$ctrl.user_statuses" on-change="$ctrl.onFilterChange('user_status', value)"></filter-select>
+			</div>
+			<div class="row" ng-repeat="user in $ctrl.users">
+				<div class="col-md-3">{{user.id}}</div>
+				<div class="col-md-3">{{user.status}}</div>
+				<div class="col-md-3">{{user.username}}</div>
+			</div>
+		</div>
+	</div>
+</div>

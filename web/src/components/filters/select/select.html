@@ -1,0 +1,3 @@
+<select ng-change="$ctrl.onChange({value: $ctrl.selectedValue})" ng-model="$ctrl.selectedValue">
+	<option ng-repeat="(key, value) in $ctrl.choices" value="{{key}}">{{value}}</option>
+</select>

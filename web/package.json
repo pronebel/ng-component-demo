@@ -1,0 +1,24 @@
+{
+    "name": "TestComponentAngular",
+    "version": "1.0.0",
+
+    "devDependencies": {
+        "webpack": "^1.13.1",
+        "html-loader": "^0.4.3",
+        "css-loader": "^0.23.1",
+        "style-loader": "^0.13.1",
+        "babel-loader": "^6.2.4",
+        "ng-annotate-loader": "^0.1.0",
+        "babel-core": "^6.10.4",
+        "babel-preset-es2015": "^6.9.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^6.1.2",
+        "angular": "^1.5.7",
+        "angular-ui-router": "^1.0.0-beta.1",
+        "bootstrap": "^4.0.0-alpha.2"
+    },
+
+    "scripts": {
+        "build": "gulp build"
+    }
+}

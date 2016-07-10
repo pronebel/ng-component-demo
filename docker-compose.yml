@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  web:
+    restart: always
+    build:
+      context: ./web
+    volumes:
+      - /web
+      - ./web/src:/web/src
+
+  api:
+    restart: always
+    build:
+      context: ./api
+    volumes:
+      - /api
+      - ./api/app:/api/app
+    ports:
+      - 8000:8000
+
+  nginx:
+    build:
+      context: ./nginx
+    depends_on:
+      - web
+      - api
+    volumes_from:
+      - web
+    ports:
+      - "80:80"
