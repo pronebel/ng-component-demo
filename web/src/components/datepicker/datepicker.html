@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-md-12">
+		<h3 class="text-md-center">Hello I'm datepicker</h3>
+		<button class="btn btn-info" ng-click="$ctrl.toggle()">Toggle</button>
+	</div>
+</div>
+<div class="row m-t-1" ng-if="$ctrl.visible">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="btn btn-primary" ng-click="$ctrl.prevMonth()">&lt;</div>
+			</div>
+			<div class="col-md-8 text-md-center"><p class="lead">{{$ctrl.months[$ctrl.currentDate.month()]}} {{$ctrl.currentDate.year()}}</p></div>
+			<div class="col-md-2">
+				<div class="btn btn-primary" ng-click="$ctrl.nextMonth()">&gt;</div>
+			</div>
+		</div>
+		<div class="row">
+			<table class="table">
+				<thead class="thead-inverse">
+					<tr>
+						<th ng-repeat="day in $ctrl.daysOfWeek">{{day}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="date in $ctrl.dates">
+						<td ng-repeat="d in date"
+							ng-click="$ctrl.selectDate(d)"
+							ng-class="{'table-success': d.selected, 'table-active': d.disabled}"
+						>{{d.day}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

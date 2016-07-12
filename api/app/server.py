@@ -7,13 +7,19 @@ app.debug = True
 
 
 @app.route('/', methods=['GET'])
-def index():
+def index_view():
     return render_template('index.html', app='home')
 
 
 @app.route('/users', methods=['GET'])
-def users():
+@app.route('/users/create', methods=['GET'])
+def users_view():
     return render_template('index.html', app='users')
+
+
+@app.route('/demo-datepicker', methods=['GET'])
+def demo_datepicler_view():
+    return render_template('index.html', app='demo_datepicker')
 
 
 @app.route('/api/users', methods=['GET'])
@@ -38,6 +44,4 @@ def get_users():
 
     status = request.args.get('status', 'null')
 
-    return json.dumps(list(filter(
-        lambda x: status in [x['status'], 'null'],
-        users)))
+    return json.dumps([user for user in users if status in (user['status'], 'null')])

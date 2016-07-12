@@ -15,7 +15,8 @@
         "gulp-babel": "^6.1.2",
         "angular": "^1.5.7",
         "angular-ui-router": "^1.0.0-beta.1",
-        "bootstrap": "^4.0.0-alpha.2"
+        "bootstrap": "^4.0.0-alpha.2",
+        "moment": "^2.14.1"
     },
 
     "scripts": {

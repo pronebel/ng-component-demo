@@ -8,7 +8,8 @@ let config = {
   context: APP_DIR,
   entry: {
     home: './apps/home/index.js',
-    users: './apps/users/index.js'
+    users: './apps/users/index.js',
+    demo_datepicker: './apps/demo_datepicker/index.js'
   },
 
   output: {
